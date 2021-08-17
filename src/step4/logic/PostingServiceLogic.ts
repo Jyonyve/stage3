@@ -39,7 +39,7 @@ class PostingServiceLogic implements PostingService {
       throw new Error('No such board with id --> ' + boardId);
     }
 
-    return this.postingStore.create(postingDto.toPostingInBoard(foundBoard));  // return문 맞나?
+    return this.postingStore.create(postingDto.toPostingInBoard(foundBoard));
   }
 
   find(postingId: string): PostingDto {
