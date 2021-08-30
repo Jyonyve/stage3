@@ -37,14 +37,12 @@ class Posting implements Entity {
     //
     const postings = [];
 
-    let postingUsid = board.nextPostingId;
     const leader = CommunityMember.getSample();
     const leaderPosting = new Posting(board.nextPostingId, board.getId(), 'The club intro', leader.email, 'Hello, it\'s good to see you');
 
-    leaderPosting.usid = postingUsid;
     postings.push(leaderPosting);
 
-    postingUsid = board.nextPostingId;
+    let postingUsid = board.nextPostingId;
     const member = CommunityMember.getSample();
     const memberPosting = new Posting(board.nextPostingId, board.getId(), 'self intro', member.email, 'Hello, My name is minsoo.');
 
