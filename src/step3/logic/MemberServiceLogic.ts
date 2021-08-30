@@ -57,19 +57,19 @@ class MemberServiceLogic implements MemberService {
         throw new Error('No such member with email: ' + memberEmail);
       }
 
-      if (memberDto.name) {
+      if (!memberDto.name) {
         memberDto.name = targetMember.name;
       }
 
-      if (memberDto.nickName) {
+      if (!memberDto.nickName) {
         memberDto.nickName = targetMember.nickName;
       }
 
-      if (memberDto.birthDay) {
+      if (!memberDto.phoneNumber) {
         memberDto.phoneNumber = targetMember.phoneNumber;
       }
 
-      if (memberDto.birthDay) {
+      if (!memberDto.birthDay) {
         memberDto.birthDay = targetMember.birthDay;
       }
 
