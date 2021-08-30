@@ -190,7 +190,7 @@ class ClubMembershipConsole {
 
       if (confirmStr.toLowerCase() === 'y' || confirmStr.toLowerCase() === 'yes') {
         //
-        console.log('\n> Removing a memberhsip -->' + targetMembership.memberEmail);
+        console.log('\n> Removing a membership -->' + targetMembership.memberEmail);
         if (this.currentClub) {
           this.clubService.removeMembership(this.currentClub.usid, targetMembership.memberEmail);
         }

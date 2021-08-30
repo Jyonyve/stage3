@@ -3,7 +3,7 @@ import MemberStore from '../store/MemberStore';
 import MemoryMap from './io/MemoryMap';
 
 
-class MemberMapstore implements MemberStore {
+class MemberMapStore implements MemberStore {
     //
     memberMap: Map<string, CommunityMember>;
 
@@ -52,4 +52,4 @@ class MemberMapstore implements MemberStore {
     }
 
 }
-export default MemberMapstore;
+export default MemberMapStore;
