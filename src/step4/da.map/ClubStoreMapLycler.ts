@@ -30,7 +30,7 @@ class ClubStoreMapLycler implements ClubStoreLycler {
       this.commentStore = null;
     }
 
-    public static getInstance(): ClubStoreLycler {
+    static getInstance(): ClubStoreLycler {
       //
       if (!this.lycler) {
         this.lycler = new ClubStoreMapLycler();

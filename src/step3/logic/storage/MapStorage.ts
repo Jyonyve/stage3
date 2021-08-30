@@ -23,7 +23,7 @@ class MapStorage {
       this.autoIdMap = new Map<string, number>();
     }
 
-    public static getInstance(): MapStorage {
+    static getInstance(): MapStorage {
       //
       if (this.uniqueInstance === undefined) {
         this.uniqueInstance = new MapStorage();

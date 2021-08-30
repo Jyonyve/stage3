@@ -8,6 +8,7 @@ class MemberMapstore implements MemberStore {
     memberMap: Map<string, CommunityMember>;
 
     constructor() {
+      //
       this.memberMap = MemoryMap.getInstance().memberMap;
     }
 

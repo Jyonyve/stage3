@@ -170,7 +170,7 @@ class ClubMembershipConsole {
         return;
       }
 
-      if (!newRole) {
+      if (newRole) {
         targetMembership.role = newRole as RoleInClub;
       }
       const clubId = targetMembership.clubId;

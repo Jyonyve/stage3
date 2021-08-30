@@ -30,7 +30,6 @@ class ClubConsole {
 
       try {
         //
-        const club = new TravelClub(clubName, clubIntro);
         const clubDto = new TravelClubDto(clubName, clubIntro);
 
         this.clubService.register(clubDto);

@@ -26,7 +26,7 @@ class MemoryMap {
       this.autoIdMap = new Map<string, number>();
     }
 
-    public static getInstance(): MemoryMap {
+    static getInstance(): MemoryMap {
       //
       if (this.uniqueInstance === undefined) {
         this.uniqueInstance = new MemoryMap();

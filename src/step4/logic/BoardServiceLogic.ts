@@ -92,11 +92,11 @@ class BoardServiceLogic implements BoardService {
       }
 
       if (boardDto.name) {
-        boardDto.name = targetBoard.name;
+        targetBoard.name = boardDto.name;
       }
 
       if (boardDto.adminEmail) {
-        boardDto.adminEmail = targetBoard.adminEmail;
+        targetBoard.adminEmail = boardDto.adminEmail;
       }
 
       const foundClub = this.clubStore.retrieve(boardDto.clubId);

@@ -95,10 +95,11 @@ class BoardServiceLogic implements BoardService {
         throw new Error('No such board with id --> ' + boardDto.clubId);
       }
 
-      if (boardDto.name) {
+      if (!boardDto.name) {
         boardDto.name = targetBoard.name;
       }
-      if (boardDto.adminEmail) {
+
+      if (!boardDto.adminEmail) {
         boardDto.adminEmail = targetBoard.adminEmail;
       }
 

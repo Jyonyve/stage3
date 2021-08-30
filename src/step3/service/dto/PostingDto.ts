@@ -48,7 +48,6 @@ class PostingDto {
 
     toPostingIn(postingId: string, boardId: string): Posting {
       //
-      const board = SocialBoard.new();
       const posting = new Posting(postingId, boardId, this.writerEmail, this.title, this.contents);
 
       posting.writtenDate = this.writtenDate;

@@ -32,7 +32,7 @@ class CommunityMember implements Entity {
 
     static getSample(): CommunityMember {
       //
-      const member = new CommunityMember('test@test.co.kr', 'Minsoo Lee', '010-3321-1001');
+      const member = new CommunityMember('namoosori@test.co.kr', 'Minsoo Lee', '010-3321-1001');
 
       member.nickName = 'Min';
       member.birthDay = '2001.09.23';

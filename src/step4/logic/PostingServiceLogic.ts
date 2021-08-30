@@ -73,11 +73,11 @@ class PostingServiceLogic implements PostingService {
       throw new Error('No such posting with id : ' + postingId);
     }
 
-    if (postingDto.title) {
+    if (!postingDto.title) {
       postingDto.title = targetPosting.title;
     }
 
-    if (postingDto.contents) {
+    if (!postingDto.contents) {
       postingDto.contents = targetPosting.contents;
     }
 

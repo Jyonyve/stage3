@@ -30,7 +30,7 @@ class ServiceLogicLycler implements ServiceLycler {
       this.commentService = null;
     }
 
-    public static shareInstance(): ServiceLycler {
+    static shareInstance(): ServiceLycler {
       //
       if (!this.lycler) {
         this.lycler = new ServiceLogicLycler();

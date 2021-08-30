@@ -28,6 +28,7 @@ class ClubServiceLogic implements ClubService {
         throw new Error('Club already exists with name: ' + clubDto.name);
       }
       const club = clubDto.toTravelClub();
+
       const clubId = this.clubStore.create(club);
 
       clubDto.usid = clubId;
@@ -69,10 +70,10 @@ class ClubServiceLogic implements ClubService {
         throw new Error('No such club with id: ' + clubDto.usid);
       }
 
-      if (clubDto.name) {
+      if (!clubDto.name) {
         clubDto.name = targetClub.name;
       }
-      if (clubDto.intro) {
+      if (!clubDto.intro) {
         clubDto.intro = targetClub.intro;
       }
 

@@ -47,7 +47,7 @@ class CommentMapStore implements CommentStore {
 
   exists(commentId: string): boolean {
     //
-    return this.commentMap.get(commentId) !== undefined;
+    return this.commentMap.get(commentId) !== null;
   }
 
 }
