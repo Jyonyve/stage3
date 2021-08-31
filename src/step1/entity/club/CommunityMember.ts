@@ -21,11 +21,6 @@ class CommunityMember implements Entity {
       this.phoneNumber = phoneNumber;
     }
 
-    static new() {
-      //
-      return new CommunityMember('', '', '');
-    }
-
     getId(): string {
       return this.email;
     }

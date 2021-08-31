@@ -20,11 +20,6 @@ class SocialBoard implements Entity {
       this.createDate = DateUtil.today();
     }
 
-    static new() {
-      //
-      return new SocialBoard('', '', '');
-    }
-
     getId(): string {
       return this.clubId;
     }
