@@ -166,13 +166,12 @@ class ClubServiceLogic implements ClubService {
       if (foundClub && foundMember) {
         const clubMembership = this.getMembershipIn(foundClub, memberId);
 
-        foundClub.membershipList.splice(clubMembership.clubId.indexOf(clubId), 1);
-        foundMember.membershipList.splice(clubMembership.memberEmail.indexOf(memberId), 1);
+        const clubIndex = foundClub.membershipList.indexOf(clubMembership);
+        const memberIndex = foundMember.membershipList.indexOf(clubMembership);
 
-        this.clubStore.update(foundClub);
-        this.memberStore.update(foundMember);
+        foundClub.membershipList.splice(clubIndex, 1);
+        foundMember.membershipList.splice(memberIndex, 1);
       }
-
     }
 
     private getMembershipIn(club: TravelClub, memberEmail: string): ClubMembership {

@@ -139,7 +139,7 @@ class ClubMembershipConsole {
         try {
           if (this.currentClub) {
             membershipDto = this.clubService.findMembershipIn(this.currentClub.usid, memberEmail);
-            console.log('\n> Found memberhsip information: ', membershipDto);
+            console.log('\n> Found membership information: ', membershipDto);
           }
           break;
         }
@@ -164,7 +164,7 @@ class ClubMembershipConsole {
         return;
       }
 
-      const newRole = question('new President|Member (0.Memebrship menu, Enter. no change): ');
+      const newRole = question('new President|Member (0.Membership menu, Enter. no change): ');
 
       if (newRole === '0') {
         return;
@@ -200,7 +200,7 @@ class ClubMembershipConsole {
 
       if (confirmStr.toLowerCase() === 'y' || confirmStr.toLowerCase() === 'yes') {
         //
-        console.log('\n> Removing a memberhsip -->' + targetMembership.memberEmail);
+        console.log('\n> Removing a membership -->' + targetMembership.memberEmail);
         if (this.currentClub) {
           this.clubService.removeMembership(this.currentClub.usid, targetMembership.memberEmail);
         }

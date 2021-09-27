@@ -30,16 +30,7 @@ class BoardMenu {
             break;
           case 2:
             this.boardConsole.findAll();
-            // this.boardConsole.findByName();
             break;
-          // case 3:
-          //   this.boardConsole.modify();
-          //   break;
-          // case 4:
-          //   this.boardConsole.remove();
-          //   break;
-          // case 5:
-          //   this.postingMenu.showMenu();
           case 0:
             return;
 
