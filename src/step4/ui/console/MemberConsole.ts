@@ -39,7 +39,9 @@ class MemberConsole {
         console.log('\n> Registered member: ', newMember);
       }
       catch (e) {
-        console.error(`Error: ${e.message}`);
+        if(e instanceof Error) {
+          console.error(`Error: ${e.message}`);
+        }
       }
     }
 
@@ -59,7 +61,9 @@ class MemberConsole {
           console.log('\n> Found member: ', memberFound);
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
     }
@@ -82,7 +86,9 @@ class MemberConsole {
           break;
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
 
@@ -114,7 +120,9 @@ class MemberConsole {
         console.log('\n> Modified member: ', targetMember);
       }
       catch (e) {
-        console.error(`Error: ${e.message}`);
+        if(e instanceof Error) {
+          console.error(`Error: ${e.message}`);
+        }
       }
     }
 

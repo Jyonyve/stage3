@@ -3,7 +3,7 @@ import ClubMembershipConsole from '../console/ClubMembershipConsole';
 
 
 class ClubMembershipMenu {
-
+    //
     clubMembershipConsole: ClubMembershipConsole;
 
     constructor() {

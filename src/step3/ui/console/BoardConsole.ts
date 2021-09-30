@@ -34,7 +34,9 @@ class BoardConsole {
           break;
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
         clubFound = null;
       }
@@ -64,7 +66,9 @@ class BoardConsole {
           console.log('\n> Registered board: ', newBoardDto);
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
     }
@@ -88,7 +92,9 @@ class BoardConsole {
         }
       }
       catch (e) {
-        console.error(`Error: ${e.message}`);
+        if(e instanceof Error) {
+          console.error(`Error: ${e.message}`);
+        }
       }
     }
 
@@ -112,7 +118,9 @@ class BoardConsole {
           break;
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
       return boardFound;
@@ -142,7 +150,9 @@ class BoardConsole {
         console.log('\n> Modified board: ', targetBoard);
       }
       catch (e) {
-        console.error(`Error: ${e.message}`);
+        if(e instanceof Error) {
+          console.error(`Error: ${e.message}`);
+        }
       }
     }
 

@@ -38,8 +38,9 @@ class ClubConsole {
           console.log('\n> Registered Club :', clubDto);
         }
         catch (e) {
-          //
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
     }
@@ -61,7 +62,9 @@ class ClubConsole {
           console.log('\n> Found club: ', clubFound);
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
 
@@ -86,7 +89,9 @@ class ClubConsole {
           break;
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
       return clubFound;
@@ -121,7 +126,9 @@ class ClubConsole {
         console.log('\n> Modified club: ', targetClub);
       }
       catch (e) {
-        console.error(`Error: ${e.message}`);
+        if(e instanceof Error) {
+          console.error(`Error: ${e.message}`);
+        }
       }
     }
 

@@ -5,14 +5,14 @@ import MemberStore from '../store/MemberStore';
 import PostingStore from '../store/PostingStore';
 import BoardMapStore from './BoardMapStore';
 import ClubMapStore from './ClubMapStore';
-import MemberMapstore from './MemberMapStore';
+import MemberMapStore from './MemberMapStore';
 import PostingMapStore from './PostingMapStore';
 import CommentStore from '../store/CommentStore';
 import CommentMapStore from './CommentMapStore';
 
 
 class ClubStoreMapLycler implements ClubStoreLycler {
-
+    //
     private static lycler: ClubStoreLycler;
 
     clubStore: ClubStore | null;
@@ -41,7 +41,7 @@ class ClubStoreMapLycler implements ClubStoreLycler {
     requestMemberStore(): MemberStore {
       //
       if (!this.memberStore) {
-        this.memberStore = new MemberMapstore();
+        this.memberStore = new MemberMapStore();
       }
       return this.memberStore;
     }

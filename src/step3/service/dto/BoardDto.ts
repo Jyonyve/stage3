@@ -14,11 +14,11 @@ class BoardDto {
       this.clubId = clubId;
       this.name = name;
       this.adminEmail = adminEmail;
-      this.createDate = DateUtil.today();  
+      this.createDate = DateUtil.today();
     }
 
     static fromEntity(board: SocialBoard): BoardDto {
-    //
+      //
       const boardDto = new BoardDto(board.clubId, board.name, board.adminEmail);
 
       boardDto.createDate = board.createDate;
@@ -33,6 +33,6 @@ class BoardDto {
       socialBoard.createDate = this.createDate;
       return socialBoard;
     }
-    
+
 }
 export default BoardDto;

@@ -52,7 +52,9 @@ class PostingConsole {
           break;
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
         boardFound = null;
       }
@@ -83,7 +85,9 @@ class PostingConsole {
           console.log('\n> Registered a posting --> ', postingDto);
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
     }
@@ -107,7 +111,9 @@ class PostingConsole {
         }
       }
       catch (e) {
-        console.error(`Error: ${e.message}`);
+        if(e instanceof Error) {
+          console.error(`Error: ${e.message}`);
+        }
       }
     }
 
@@ -133,8 +139,11 @@ class PostingConsole {
           console.log('\n> Found posting: ', postingDto);
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
+
       }
     }
 
@@ -161,7 +170,9 @@ class PostingConsole {
           break;
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
         postingDto = null;
       }
@@ -191,7 +202,9 @@ class PostingConsole {
         console.log('\n> Modified Posting : ', targetPosting);
       }
       catch (e) {
-        console.error(`Error: ${e.message}`);
+        if(e instanceof Error) {
+          console.error(`Error: ${e.message}`);
+        }
       }
     }
 

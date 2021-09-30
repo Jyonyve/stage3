@@ -56,7 +56,9 @@ class ClubMembershipConsole {
 
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
         clubFound = null;
       }
@@ -91,7 +93,9 @@ class ClubMembershipConsole {
         }
       }
       catch (e) {
-        console.error(`Error: ${e.message}`);
+        if(e instanceof Error) {
+          console.error(`Error: ${e.message}`);
+        }
       }
 
     }
@@ -120,7 +124,9 @@ class ClubMembershipConsole {
           }
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
     }
@@ -144,7 +150,9 @@ class ClubMembershipConsole {
           break;
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
       return membershipDto;

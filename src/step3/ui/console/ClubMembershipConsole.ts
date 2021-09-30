@@ -8,7 +8,7 @@ import ServiceLycler from '../../service/ServiceLycler';
 
 
 class ClubMembershipConsole {
-
+    //
     currentClub: TravelClubDto | null = null;
 
     clubService: ClubService;
@@ -53,7 +53,9 @@ class ClubMembershipConsole {
           break;
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
         clubFound = null;
       }
@@ -86,7 +88,9 @@ class ClubMembershipConsole {
           console.log(`\n> Add a member [email:${email}] in club [name:${this.currentClub.name}]`);
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
     }
@@ -112,7 +116,9 @@ class ClubMembershipConsole {
           console.log('\n> Found membership information: ', membershipDto);
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
     }
@@ -136,7 +142,9 @@ class ClubMembershipConsole {
           }
         }
         catch (e) {
-          console.error(`Error: ${e.message}`);
+          if(e instanceof Error) {
+            console.error(`Error: ${e.message}`);
+          }
         }
       }
       return membershipDto;
