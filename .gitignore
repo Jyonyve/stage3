@@ -25,9 +25,9 @@ yarn-error.log*
 .vscode
 *.iml
 
-#user-added
-package.json
-package-lock.json
-tsconfig.json
-yarn.lock
-.editorconfig
+# #user-added
+# package.json
+# package-lock.json
+# tsconfig.json
+# yarn.lock
+# .editorconfig
