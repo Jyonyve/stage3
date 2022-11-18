@@ -24,3 +24,9 @@ yarn-error.log*
 .idea
 .vscode
 *.iml
+
+#user-added
+package.json
+package-lock.json
+tsconfig.json
+yarn.lock
